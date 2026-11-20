@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color: #080f1e;
+    background-color: #080f1e;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Grifo manual desenhado à mão com preenchimento sólido (#2563EB) e borda de volume (#3B82F6) */
+.hand-highlight {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0.12em 0.42em;
+  margin: 0 -0.06em;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 40' preserveAspectRatio='none'%3E%3Cpath d='M1,21 C11,6 32,2 68,4 C112,7 162,2 204,5 C223,6 234,11 239,19 C228,33 198,38 156,36 C108,34 62,39 26,35 C12,33 5,28 1,21 Z' fill='%233B82F6'/%3E%3Cpath d='M4,20 C13,9 34,5 68,7 C112,10 162,5 202,8 C220,9 230,13 235,19 C225,30 196,35 156,33 C108,31 62,36 28,32 C15,30 8,26 4,20 Z' fill='%232563EB'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
